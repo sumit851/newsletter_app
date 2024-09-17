@@ -5,10 +5,16 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // import Error from "./routes/ErorrPage.tsx";
 import { SignUp, Error } from "./routes/index.ts";
+import Confirm from "./routes/confirm.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <SignUp />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/confirm-email-sent",
+    element: <Confirm />,
     errorElement: <Error />,
   },
 ]);
